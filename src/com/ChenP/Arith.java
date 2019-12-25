@@ -264,7 +264,7 @@ public class Arith {
             if (a[j] + memory[i] - b[j] < 0) {
                 memory[i] += 10;
                 result[i] = a[j] + memory[i] - b[j];
-                memory[i-1]-=1;
+                memory[i - 1] -= 1;
             } else result[i] = a[j] + memory[j] - b[j];
         }
         System.out.println(line() + Arrays.toString(result));
@@ -307,14 +307,18 @@ public class Arith {
                             System.out.println(line() + " Full B " + Arrays.toString(fullB));
                             System.out.println();
 */
-                            int[] result = summator(fullA, fullB);
-                            System.out.println(line() + " result is " + Arrays.toString(result));
+                            Summator sum = new Summator(fullA, fullB, intA.length, "+");
+//                            int[] result = summator(fullA, fullB);
+//                            System.out.println(line() + " result is " + sum.result());
+                            return sum.result();
+                            /*
                             int periodIndex = intA.length;
 
                             //вставка точки
                             StringBuilder sb = new StringBuilder(intArrToString("+", result, periodIndex));
                             System.out.println(line() + "result with dot is " + sb.toString());
                             return sb.toString();
+*/
 
                         }
                         // если дробная часть b длинее a
@@ -325,14 +329,8 @@ public class Arith {
                             int[] fullA = merge(intA, fracA);
                             int[] fullB = merge(intB, fracB);
 
-                            int[] result = summator(fullA, fullB);
-                            System.out.println(line() + " result is " + Arrays.toString(result));
-                            int periodIndex = intA.length;
-
-                            //вставка точки
-                            StringBuilder sb = new StringBuilder(intArrToString("+", result, periodIndex));
-                            System.out.println(line() + "result with dot is " + sb.toString());
-                            return sb.toString();
+                            Summator sum = new Summator(fullA, fullB, intA.length, "+");
+                            return sum.result();
 
                         }
 
@@ -349,14 +347,8 @@ public class Arith {
                             int[] fullA = merge(intA, fracA);
                             int[] fullB = merge(intB, fracB);
 
-                            int[] result = summator(fullA, fullB);
-                            System.out.println(line() + " result is " + Arrays.toString(result));
-                            int periodIndex = intA.length;
-
-                            //вставка точки
-                            StringBuilder sb = new StringBuilder(intArrToString("+", result, periodIndex));
-                            System.out.println(line() + "result with dot is " + sb.toString());
-                            return sb.toString();
+                            Summator sum = new Summator(fullA, fullB, intA.length, "+");
+                            return sum.result();
 
                         }
                         // если дробная часть b длинее a
@@ -367,14 +359,8 @@ public class Arith {
                             int[] fullA = merge(intA, fracA);
                             int[] fullB = merge(intB, fracB);
 
-                            int[] result = summator(fullA, fullB);
-                            System.out.println(line() + " result is " + Arrays.toString(result));
-                            int periodIndex = intA.length;
-
-                            //вставка точки
-                            StringBuilder sb = new StringBuilder(intArrToString("+", result, periodIndex));
-                            System.out.println(line() + "result with dot is " + sb.toString());
-                            return sb.toString();
+                            Summator sum = new Summator(fullA, fullB, intA.length, "+");
+                            return sum.result();
 
                         }
 
@@ -393,29 +379,9 @@ public class Arith {
 
                             int[] fullA = merge(intA, fracA);
                             int[] fullB = merge(intB, fracB);
-                            /*
-                            //Отладка
-                            System.out.println(line() + " intA length " + intA.length + "  ");
-                            System.out.println(line() + Arrays.toString(intA));
-                            System.out.println(line() + " fracA.length " + fracA.length + "  ");
-                            System.out.println(line() + Arrays.toString(fracA));
-                            System.out.println(line() + " Full A " + Arrays.toString(fullA));
-                            System.out.println();
-                            System.out.printf(line() + " intB.length " + intB.length + "  ");
-                            System.out.println(line() + Arrays.toString(intB));
-                            System.out.printf(line() + " fracB.length " + fracB.length + "  ");
-                            System.out.println(line() + Arrays.toString(fracB));
-                            System.out.println(line() + " Full B " + Arrays.toString(fullB));
-                            System.out.println();
-*/
-                            int[] result = summator(fullA, fullB);
-                            System.out.println(line() + " result is " + Arrays.toString(result));
-                            int periodIndex = intA.length;
 
-                            //вставка точки
-                            StringBuilder sb = new StringBuilder(intArrToString("-", result, periodIndex));
-                            System.out.println(line() + "result with dot is " + sb.toString());
-                            return sb.toString();
+                            Summator sum = new Summator(fullA, fullB, intA.length, "-");
+                            return sum.result();
 
                         }
                         // если дробная часть b длинее a
@@ -426,14 +392,8 @@ public class Arith {
                             int[] fullA = merge(intA, fracA);
                             int[] fullB = merge(intB, fracB);
 
-                            int[] result = summator(fullA, fullB);
-                            System.out.println(line() + " result is " + Arrays.toString(result));
-                            int periodIndex = intA.length;
-
-                            //вставка точки
-                            StringBuilder sb = new StringBuilder(intArrToString("-", result, periodIndex));
-                            System.out.println(line() + "result with dot is " + sb.toString());
-                            return sb.toString();
+                            Summator sum = new Summator(fullA, fullB, intA.length, "-");
+                            return sum.result();
 
                         }
 
@@ -450,14 +410,8 @@ public class Arith {
                             int[] fullA = merge(intA, fracA);
                             int[] fullB = merge(intB, fracB);
 
-                            int[] result = summator(fullA, fullB);
-                            System.out.println(line() + " result is " + Arrays.toString(result));
-                            int periodIndex = intA.length;
-
-                            //вставка точки
-                            StringBuilder sb = new StringBuilder(intArrToString("-", result, periodIndex));
-                            System.out.println(line() + "result with dot is " + sb.toString());
-                            return sb.toString();
+                            Summator sum = new Summator(fullA, fullB, intA.length, "-");
+                            return sum.result();
 
                         }
                         // если дробная часть b длинее a
@@ -468,14 +422,8 @@ public class Arith {
                             int[] fullA = merge(intA, fracA);
                             int[] fullB = merge(intB, fracB);
 
-                            int[] result = summator(fullA, fullB);
-                            System.out.println(line() + " result is " + Arrays.toString(result));
-                            int periodIndex = intA.length;
-
-                            //вставка точки
-                            StringBuilder sb = new StringBuilder(intArrToString("-", result, periodIndex));
-                            System.out.println(line() + "result with dot is " + sb.toString());
-                            return sb.toString();
+                            Summator sum = new Summator(fullA, fullB, intA.length, "-");
+                            return sum.result();
 
                         }
 
@@ -483,9 +431,9 @@ public class Arith {
                 }
             }
         } catch (Exception e) {
-            return "ADDwPer Method Error";
+            return "add Method Error";
         }
-        return "ADD Method Error";
+        return "add Method Error";
     }
 
     public static String sub(String a, String b) {

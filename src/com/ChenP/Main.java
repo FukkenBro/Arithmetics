@@ -13,11 +13,11 @@ public class Main {
 //        System.out.println("default method "+sum);
 
 
-        String a = "1";
+        String a = "3131";
         String b = "91";
 
-        Arith.sub(a,b);
-        System.out.println(Double.parseDouble(a)-Double.parseDouble(b));
+        Arith.add(a,b);
+        System.out.println(Double.parseDouble(a)+Double.parseDouble(b));
     }
 }
 
