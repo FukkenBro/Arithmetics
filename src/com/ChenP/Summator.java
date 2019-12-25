@@ -21,14 +21,14 @@ public class Summator {
     }
 
     public int[] getSum() {
-        return summatorLoop();
+        return mainLoop();
     }
 
     public String result() {
         return insertPeriod();
     }
 
-    private int[] summatorLoop() {
+    private int[] mainLoop() {
         int[] memory = new int[a.length];
         int[] result = new int[a.length];
         for (int i = result.length - 1, j = a.length - 1; j >= 0; j--, i--) {
@@ -40,8 +40,9 @@ public class Summator {
         return result;
     }
 
+
     private String insertPeriod() {
-        return Arith.intArrToString(getNegPrefix(), summatorLoop(), periodIndex);
+        return Arith.intArrToString(getNegPrefix(), mainLoop(), periodIndex);
 
     }
 
